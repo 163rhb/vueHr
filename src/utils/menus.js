@@ -49,6 +49,7 @@ export const formatRoutes=(routes)=> {
                 meta:meta,
                 iconCls:iconCls,
                 children:children,
+                //路由懒加载
                 component(resolve){
                     if (component.startsWith("Homel")) {
                         require(['../views/' + component + '.vue'], resolve);
